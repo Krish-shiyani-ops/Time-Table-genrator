@@ -1,6 +1,6 @@
 /* Smart College Timetable Generator - Greedy + Backtracking (A1 & A2 generated together) */
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-const PERIODsssS = [["Period 1","09:00–09:50"],["Period 2","09:50–10:40"],["Period 3","10:40–11:30"],
+const PERIODS = [["Period 1","09:00–09:50"],["Period 2","09:50–10:40"],["Period 3","10:40–11:30"],
                  ["Period 4","12:00–12:50"],["Period 5","12:50–13:40"],["Period 6","13:40–14:30"]];
 const SUBJECTS = [
   { code: "DAA", teacher: "DR. Shruti Yagnik",    lec: 3, lab: 1 },
