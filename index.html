@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart College Timetable Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Smart College Timetable Generator Using Greedy Algorithm and Backtracking</h1>
+  <p>Indus University &bull; Department of Information Technology &bull; Semester 5 &bull; Section A &bull; Batches A1 &amp; A2</p>
+</header>
+<main>
+  <section class="panel controls">
+    <label>Select Your Batch
+      <select id="batchSelect"><option value="A1">Batch A1</option><option value="A2">Batch A2</option></select></label>
+    <label>Algorithm
+      <select id="algoSelect"><option value="greedy">Greedy</option><option value="backtracking">Backtracking</option></select></label>
+    <button id="generateBtn" class="primary">Generate Timetable</button>
+    <button id="printBtn">Print Timetable</button>
+    <button id="csvBtn">Download as CSV</button>
+  </section>
+  <section id="cards" class="cards"></section>
+  <section class="panel">
+    <h2 id="gridTitle">Weekly Timetable</h2>
+    <div class="legend"><span class="lec">Lecture</span><span class="lab">Lab</span><span class="free">Free</span></div>
+    <div class="scroll" id="grid"></div>
+  </section>
+  <section class="panel"><h2>Validation Report (A1 + A2 checked together)</h2><div id="report"></div></section>
+  <section class="two">
+    <div class="panel"><h2>Subjects &amp; Teachers (same for A1 and A2)</h2>
+      <div class="scroll"><table class="ref"><thead><tr><th>Subject</th><th>Teacher</th><th>Lectures</th><th>Labs</th><th>Total</th></tr></thead><tbody id="refTable"></tbody></table></div></div>
+    <div class="panel"><h2>Algorithm Comparison (average of 10 runs)</h2>
+      <table class="ref"><thead><tr><th>Algorithm</th><th>Avg. time</th><th>Result</th></tr></thead><tbody id="compare"></tbody></table></div>
+  </section>
+  <section class="panel"><h2>How the Algorithms Work</h2>
+    <p><b>Greedy:</b> creates all 48 sessions (24 per batch), sorts them so labs and heavy subjects go first, and for each one picks the best valid (day, period, room) by a simple score (least busy day, least used room). It never undoes a decision; if no valid place exists it reports failure.</p>
+    <p><b>Backtracking:</b> places sessions one by one using the same constraint check. If a session has no valid slot, it goes back, removes the previous placement and tries another slot or room, until every session is placed or all options are exhausted.</p>
+    <p><b>Shared checks:</b> a teacher, room or batch can hold only one session per slot, and A1/A2 never have the same subject at the same time. Teacher-to-subject mapping is identical for both batches.</p>
+  </section>
+</main>
+<footer>DAA Mini Project &bull; Indus University &bull; IT Semester 5 &bull; HTML, CSS &amp; Vanilla JavaScript</footer>
+<script src="script.js"></script>
+</body>
+</html>
