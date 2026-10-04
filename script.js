@@ -10,7 +10,7 @@ const SUBJECTS = [
   { code: "CN",  teacher: "Mrs. Dhwani Goradiya", lec: 3, lab: 1 },
   { code: "BST", teacher: "Mr. Prashant Chauhan", lec: 2, lab: 2 }
 ];
-const LEC_ROOMS = ["LH-4", "LH-5", "LH-6", "B-425"];
+const LEC_ROOMS = ["LH-4-5", "LH-5-6", "B-425"];
 const LAB_ROOMS = ["LAB-4", "LAB-5"];
 const BATCHES = ["A1", "A2"];
 const NSLOTS = DAYS.length * PERIODS.length; // 30
