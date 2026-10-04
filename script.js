@@ -2,7 +2,7 @@
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 const PERIODS = [["Period 1","09:00–09:50"],["Period 2","09:50–10:40"],["Period 3","10:40–11:30"],
                  ["Period 4","12:00–12:50"],["Period 5","12:50–13:40"],["Period 6","13:40–14:30"]];
-const SUBJECTSssss = [
+const SUBJECTS = [
   { code: "DAA", teacher: "DR. Shruti Yagnik",    lec: 3, lab: 1 },
   { code: "WT",  teacher: "Mrs. Poonam Patel",    lec: 3, lab: 1 },
   { code: "CG",  teacher: "Mr. Sanjay Prajapati", lec: 3, lab: 1 },
@@ -10,7 +10,7 @@ const SUBJECTSssss = [
   { code: "CN",  teacher: "Mrs. Dhwani Goradiya", lec: 3, lab: 1 },
   { code: "BST", teacher: "Mr. Prashant Chauhan", lec: 2, lab: 2 }
 ];
-const LEC_ROOMS = ["LH-4-5", "LH-4-6", "B-425"];
+const LEC_ROOMS = ["LH-4", "LH-5", "LH-6", "B-425"];
 const LAB_ROOMS = ["LAB-4", "LAB-5"];
 const BATCHES = ["A1", "A2"];
 const NSLOTS = DAYS.length * PERIODS.length; // 30
